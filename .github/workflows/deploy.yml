@@ -35,7 +35,7 @@ jobs:
         run: |
           STR=$(cat editme.txt)
           SUB='developer'
-          if [[ "$STR" != *"$SUB"* ]]; then
+          if [[ "$STR" == *"$SUB"* ]]; then
             echo "Successfully ran test for {{vars.sha_short}}. The file looks okay."
             exit 0
           fi
